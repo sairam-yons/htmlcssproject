@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Styled Layout</title>
+  <style>
+.outer-square{
+    width: 600px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: (3, 1fr);
+    grid-template-rows: (3, 1fr);
+}
+
+.inner-element{
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.inner-square{
+    background-color: #0b9931;
+    height: 180px;
+    width: 180px;
+}
+
+.inner-circle{
+    border-radius: 50%;
+    background-color: #3453db;
+    width: 180px;
+    height: 180px;
+}
+
+.inner-element:nth-child(odd){
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.inner-element:nth-child(even){
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+:nth-child(1){
+    grid-column: 1;
+}
+:nth-child(2){
+    grid-column: 2;
+}
+:nth-child(3){
+    grid-column: 3;
+}
+  </style>
+</head>
+<body>
+  <div class="outer-square">
+    <div class="inner-square"></div>
+    <div class="inner-circle"></div>
+    <div class="inner-square"></div>
+    <div class="inner-circle"></div>
+    <div class="inner-square"></div>
+    <div class="inner-circle"></div>
+    <div class="inner-square"></div>
+    <div class="inner-circle"></div>
+    <div class="inner-square"></div>
+  </div>
+</body>
+</html>
